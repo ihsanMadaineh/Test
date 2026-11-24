@@ -4,15 +4,15 @@ const translations = {
     brandName: 'أفق',
     navStats: 'الإحصائيات',
     navFeatures: 'المميزات',
+    navShowcase: 'أعمالنا',
     navPricing: 'الأسعار',
     navFaq: 'الأسئلة الشائعة',
-    navTestimonials: 'آراء العملاء',
     navContact: 'تواصل معنا',
     heroPill: 'الإصدار 2.0 متاح الآن للفرق والشركات الناشئة',
     heroTitle: 'ابنِ مشروعك الرقمي بسرعة وكفاءة هندسية عالية',
     heroDesc: 'نوفر لك البنية التحتية والأدوات السحابية الحديثة لتحويل أفكارك إلى منتجات رقمية متكاملة بأبسط الطرق وأعلى معايير الأداء والأمان.',
     heroCtaPrimary: 'استكشف الباقات',
-    heroCtaSecondary: 'تعرّف على المميزات',
+    heroCtaSecondary: 'شاهد نماذج الأعمال',
     statProjects: 'مشروع نشط',
     statUptime: 'نسبة الجاهزية %',
     statCountries: 'دولة حول العالم',
@@ -31,6 +31,23 @@ const translations = {
     feat5Desc: 'لوحة تحكم شاملة تمنحك رؤية واضحة لأداء مشروعك وسلوك المستخدمين لحظة بلحظة.',
     feat6Title: 'ربط برمجي مرن (API)',
     feat6Desc: 'واجهة برمجية نظيفة تتيح لك التكامل السريع مع أدواتك وخدماتك الخارجية المفضلة.',
+    showcaseTitle: 'نماذج من مشاريع المنصة',
+    showcaseSubtitle: 'استعرض حلولاً حقيقية تم بناؤها وتشغيلها بكفاءة عالية عبر بنيتنا السحابية.',
+    filterAll: 'الكل',
+    filterWeb: 'منصات ويب',
+    filterApps: 'تطبيقات سطح المكتب والجوال',
+    filterCloud: 'أتمتة وسحابة',
+    tagWeb: 'منصة ويب',
+    tagApps: 'تطبيق متعدد المنصات',
+    tagCloud: 'أتمتة وسحابة',
+    proj1Title: 'نظام إدارة المتابعة التعليمية',
+    proj1Desc: 'بوابة تفاعلية لمتابعة تقدم الطلاب ولوحات الشرف والتقارير الفورية بدون خوادم معقدة.',
+    proj2Title: 'المؤذن العالمي',
+    proj2Desc: 'تطبيق خفيف وعالي الأداء يعمل في شريط النظام مع تنبيهات دقيقة وتشغيل صوتي محلي.',
+    proj3Title: 'جسر المزامنة البرمجية',
+    proj3Desc: 'أداة ربط ذكية لمزامنة الحزم البرمجية والتحقق من سلامة الملفات تلقائياً.',
+    proj4Title: 'المكتبة الرقمية السريعة',
+    proj4Desc: 'قارئ مستندات رقمي مع فهرسة فورية وتخزين مؤقت للعمل دون اتصال بالإنترنت.',
     pricingTitle: 'خطط أسعار تناسب احتياجاتك',
     billingMonthly: 'دفع شهري',
     billingYearly: 'دفع سنوي',
@@ -81,15 +98,15 @@ const translations = {
     brandName: 'Ufug',
     navStats: 'Stats',
     navFeatures: 'Features',
+    navShowcase: 'Showcase',
     navPricing: 'Pricing',
     navFaq: 'FAQ',
-    navTestimonials: 'Testimonials',
     navContact: 'Contact Us',
     heroPill: 'Version 2.0 is now live for teams & startups',
     heroTitle: 'Build Your Digital Product with Speed and Engineering Precision',
     heroDesc: 'We provide modern cloud infrastructure and tools to turn your ideas into complete digital products with peak performance and security.',
     heroCtaPrimary: 'Explore Plans',
-    heroCtaSecondary: 'Discover Features',
+    heroCtaSecondary: 'View Showcase',
     statProjects: 'Active Projects',
     statUptime: 'Uptime Guarantee %',
     statCountries: 'Countries Worldwide',
@@ -108,6 +125,23 @@ const translations = {
     feat5Desc: 'Comprehensive dashboard giving real-time insights into performance and user behavior.',
     feat6Title: 'Flexible API Integration',
     feat6Desc: 'Clean RESTful endpoints enabling rapid integration with your favorite external services.',
+    showcaseTitle: 'Platform Project Showcase',
+    showcaseSubtitle: 'Explore real-world solutions built and operated at scale on our cloud infrastructure.',
+    filterAll: 'All',
+    filterWeb: 'Web Platforms',
+    filterApps: 'Desktop & Mobile Apps',
+    filterCloud: 'Cloud & Automation',
+    tagWeb: 'Web Platform',
+    tagApps: 'Cross-Platform App',
+    tagCloud: 'Cloud & Automation',
+    proj1Title: 'Educational Progress Tracker',
+    proj1Desc: 'Interactive portal for student tracking, leaderboards, and instant reporting with zero heavy servers.',
+    proj2Title: 'Global Muazzin',
+    proj2Desc: 'Lightweight, high-performance system tray app with accurate alerts and local audio playback.',
+    proj3Title: 'AI-Git Sync Bridge',
+    proj3Desc: 'Smart developer bridge for synchronizing code patches and verifying file integrity automatically.',
+    proj4Title: 'Fast Digital Library',
+    proj4Desc: 'Digital document reader with instant indexing and offline caching support.',
     pricingTitle: 'Pricing Plans That Scale With You',
     billingMonthly: 'Monthly',
     billingYearly: 'Yearly',
@@ -243,6 +277,27 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => navLinks.classList.remove('open'));
   });
 
+  // تصفية معرض الأعمال حسب الفئة
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      projectCards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
   // عداد الإحصائيات المتحرك
   const statNumbers = document.querySelectorAll('.stat-number');
   statNumbers.forEach((el) => {
@@ -287,10 +342,17 @@ document.addEventListener('DOMContentLoaded', () => {
     signupForm.reset();
   });
 
-  // زر العودة للأعلى
+  // شريط تقدم القراءة وزر العودة للأعلى
   const scrollTopBtn = document.getElementById('scroll-top');
+  const readingProgress = document.getElementById('reading-progress');
+
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 350) {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    readingProgress.style.width = `${progress}%`;
+
+    if (scrollTop > 350) {
       scrollTopBtn.classList.add('visible');
     } else {
       scrollTopBtn.classList.remove('visible');
@@ -300,4 +362,20 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // حركة الظهور التدريجي للأقسام عند التمرير
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  revealElements.forEach((el) => revealObserver.observe(el));
 });

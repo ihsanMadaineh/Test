@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="reading-progress" class="reading-progress"></div>
+
   <header class="navbar">
     <div class="container nav-content">
       <a href="#" class="logo">
@@ -17,9 +19,9 @@
       <nav id="nav-links" class="nav-links">
         <a href="#stats" data-i18n="navStats">الإحصائيات</a>
         <a href="#features" data-i18n="navFeatures">المميزات</a>
+        <a href="#showcase" data-i18n="navShowcase">أعمالنا</a>
         <a href="#pricing" data-i18n="navPricing">الأسعار</a>
         <a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a>
-        <a href="#testimonials" data-i18n="navTestimonials">آراء العملاء</a>
         <a href="#contact" class="btn btn-outline" data-i18n="navContact">تواصل معنا</a>
         <button id="lang-toggle" class="btn btn-secondary" aria-label="Switch Language">EN</button>
         <button id="theme-toggle" class="btn btn-secondary" aria-label="Toggle Theme">🌙</button>
@@ -28,19 +30,19 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero reveal">
       <div class="container hero-content">
         <span class="hero-pill" data-i18n="heroPill">الإصدار 2.0 متاح الآن للفرق والشركات الناشئة</span>
         <h1 data-i18n="heroTitle">ابنِ مشروعك الرقمي بسرعة وكفاءة هندسية عالية</h1>
         <p data-i18n="heroDesc">نوفر لك البنية التحتية والأدوات السحابية الحديثة لتحويل أفكارك إلى منتجات رقمية متكاملة بأبسط الطرق وأعلى معايير الأداء والأمان.</p>
         <div class="hero-actions">
           <a href="#pricing" class="btn btn-primary" data-i18n="heroCtaPrimary">استكشف الباقات</a>
-          <a href="#features" class="btn btn-secondary" data-i18n="heroCtaSecondary">تعرّف على المميزات</a>
+          <a href="#showcase" class="btn btn-secondary" data-i18n="heroCtaSecondary">شاهد نماذج الأعمال</a>
         </div>
       </div>
     </section>
 
-    <section id="stats" class="stats-bar">
+    <section id="stats" class="stats-bar reveal">
       <div class="container stats-grid">
         <div class="stat-item">
           <span class="stat-number" data-target="1500">0</span>
@@ -61,7 +63,7 @@
       </div>
     </section>
 
-    <section id="features" class="features">
+    <section id="features" class="features reveal">
       <div class="container">
         <h2 class="section-title" data-i18n="featuresTitle">لماذا تختار منصتنا؟</h2>
         <p class="section-subtitle" data-i18n="featuresSubtitle">مجموعة متكاملة من الأدوات المصممة لتسريع دورة التطوير وتقليل التكاليف التشغيلية.</p>
@@ -100,7 +102,44 @@
       </div>
     </section>
 
-    <section id="pricing" class="pricing">
+    <section id="showcase" class="showcase reveal">
+      <div class="container">
+        <h2 class="section-title" data-i18n="showcaseTitle">نماذج من مشاريع المنصة</h2>
+        <p class="section-subtitle" data-i18n="showcaseSubtitle">استعرض حلولاً حقيقية تم بناؤها وتشغيلها بكفاءة عالية عبر بنيتنا السحابية.</p>
+        
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all" data-i18n="filterAll">الكل</button>
+          <button class="filter-btn" data-filter="web" data-i18n="filterWeb">منصات ويب</button>
+          <button class="filter-btn" data-filter="apps" data-i18n="filterApps">تطبيقات سطح المكتب والجوال</button>
+          <button class="filter-btn" data-filter="cloud" data-i18n="filterCloud">أتمتة وسحابة</button>
+        </div>
+
+        <div class="showcase-grid">
+          <article class="project-card" data-category="web">
+            <div class="project-tag" data-i18n="tagWeb">منصة ويب</div>
+            <h3 data-i18n="proj1Title">نظام إدارة المتابعة التعليمية</h3>
+            <p data-i18n="proj1Desc">بوابة تفاعلية لمتابعة تقدم الطلاب ولوحات الشرف والتقارير الفورية بدون خوادم معقدة.</p>
+          </article>
+          <article class="project-card" data-category="apps">
+            <div class="project-tag" data-i18n="tagApps">تطبيق متعدد المنصات</div>
+            <h3 data-i18n="proj2Title">المؤذن العالمي</h3>
+            <p data-i18n="proj2Desc">تطبيق خفيف وعالي الأداء يعمل في شريط النظام مع تنبيهات دقيقة وتشغيل صوتي محلي.</p>
+          </article>
+          <article class="project-card" data-category="cloud">
+            <div class="project-tag" data-i18n="tagCloud">أتمتة وسحابة</div>
+            <h3 data-i18n="proj3Title">جسر المزامنة البرمجية</h3>
+            <p data-i18n="proj3Desc">أداة ربط ذكية لمزامنة الحزم البرمجية والتحقق من سلامة الملفات تلقائياً.</p>
+          </article>
+          <article class="project-card" data-category="web">
+            <div class="project-tag" data-i18n="tagWeb">منصة ويب</div>
+            <h3 data-i18n="proj4Title">المكتبة الرقمية السريعة</h3>
+            <p data-i18n="proj4Desc">قارئ مستندات رقمي مع فهرسة فورية وتخزين مؤقت للعمل دون اتصال بالإنترنت.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing reveal">
       <div class="container">
         <h2 class="section-title" data-i18n="pricingTitle">خطط أسعار تناسب احتياجاتك</h2>
         <div class="billing-toggle">
@@ -156,7 +195,7 @@
       </div>
     </section>
 
-    <section id="faq" class="faq">
+    <section id="faq" class="faq reveal">
       <div class="container">
         <h2 class="section-title" data-i18n="faqTitle">الأسئلة الشائعة</h2>
         <div class="faq-list">
@@ -191,7 +230,7 @@
       </div>
     </section>
 
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials reveal">
       <div class="container">
         <h2 class="section-title" data-i18n="testimonialsTitle">ماذا يقول عملاؤنا؟</h2>
         <div class="testimonials-grid">
@@ -207,7 +246,7 @@
       </div>
     </section>
 
-    <section id="contact" class="cta">
+    <section id="contact" class="cta reveal">
       <div class="container cta-box">
         <h2 data-i18n="ctaTitle">جاهز لإطلاق خطوتك القادمة؟</h2>
         <p data-i18n="ctaSubtitle">انضم إلى مئات المطورين ورواد الأعمال الذين يثقون في حلولنا اليوم.</p>
@@ -228,6 +267,7 @@
       <p data-i18n="footerCopy">© 2026 منصة أفق. جميع الحقوق محفوظة.</p>
       <div class="footer-links">
         <a href="#features" data-i18n="navFeatures">المميزات</a>
+        <a href="#showcase" data-i18n="navShowcase">أعمالنا</a>
         <a href="#pricing" data-i18n="navPricing">الأسعار</a>
         <a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a>
       </div>
