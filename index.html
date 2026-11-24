@@ -12,8 +12,10 @@
       <a href="#" class="logo">أفق</a>
       <nav class="nav-links">
         <a href="#features">المميزات</a>
-        <a href="#about">عن المنصة</a>
+        <a href="#pricing">الأسعار</a>
+        <a href="#testimonials">آراء العملاء</a>
         <a href="#contact" class="btn btn-outline">تواصل معنا</a>
+        <button id="theme-toggle" class="btn btn-secondary" aria-label="تبديل المظهر">🌙</button>
       </nav>
     </div>
   </header>
@@ -53,14 +55,54 @@
       </div>
     </section>
 
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2 class="section-title">خطط أسعار تناسب احتياجاتك</h2>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>البداية</h3>
+            <div class="price">مجاني</div>
+            <ul>
+              <li>مشروع واحد نشط</li>
+              <li>دعم فني عبر البريد</li>
+              <li>استضافة سحابية أساسية</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary">ابدأ مجاناً</a>
+          </div>
+          <div class="price-card featured">
+            <span class="badge">الأكثر طلباً</span>
+            <h3>الاحترافية</h3>
+            <div class="price">29$ <span>/ شهرياً</span></div>
+            <ul>
+              <li>مشاريع غير محدودة</li>
+              <li>دعم فني على مدار الساعة</li>
+              <li>نطاق مخصص وشهادة SSL</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">اشترك الآن</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2 class="section-title">ماذا يقول عملاؤنا؟</h2>
+        <blockquote class="testimonial-quote">
+          "ساعدتنا منصة أفق على إطلاق متجرنا الإلكتروني في أقل من أسبوع وبأداء مذهل."
+          <cite>— سارة المنصور، مؤسسة متجر سحاب</cite>
+        </blockquote>
+      </div>
+    </section>
+
     <section id="contact" class="cta">
       <div class="container cta-box">
         <h2>جاهز لإطلاق خطوتك القادمة؟</h2>
         <p>انضم إلى مئات المطورين ورواد الأعمال الذين يثقون في حلولنا اليوم.</p>
-        <form class="signup-form" onsubmit="event.preventDefault(); alert('شكراً لاشتراكك!');">
+        <form id="signup-form" class="signup-form">
           <input type="email" placeholder="أدخل بريدك الإلكتروني..." required />
           <button type="submit" class="btn btn-primary">اشترك الآن</button>
         </form>
+        <p id="form-feedback" class="feedback-msg"></p>
       </div>
     </section>
   </main>
@@ -70,5 +112,6 @@
       <p>© 2026 منصة أفق. جميع الحقوق محفوظة.</p>
     </div>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>
