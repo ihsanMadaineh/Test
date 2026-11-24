@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>منصة أفق | حلول رقمية ذكية</title>
+  <title>منصة أفق | منظومة الحلول الرقمية المتكاملة</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="navbar">
     <div class="container nav-content">
-      <a href="#" class="logo">أفق</a>
-      <nav class="nav-links">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        أفق
+      </a>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="القائمة">☰</button>
+      <nav id="nav-links" class="nav-links">
+        <a href="#stats">الإحصائيات</a>
         <a href="#features">المميزات</a>
         <a href="#pricing">الأسعار</a>
+        <a href="#faq">الأسئلة الشائعة</a>
         <a href="#testimonials">آراء العملاء</a>
         <a href="#contact" class="btn btn-outline">تواصل معنا</a>
         <button id="theme-toggle" class="btn btn-secondary" aria-label="تبديل المظهر">🌙</button>
@@ -23,11 +29,33 @@
   <main>
     <section class="hero">
       <div class="container hero-content">
-        <h1>ابنِ مشروعك الرقمي بسرعة وكفاءة عالية</h1>
-        <p>نوفر لك الأدوات والتقنيات الحديثة لتحويل أفكارك إلى منتجات رقمية متكاملة بأبسط الطرق وأعلى معايير الجودة.</p>
+        <span class="hero-pill">الإصدار 2.0 متاح الآن للفرق والشركات الناشئة</span>
+        <h1>ابنِ مشروعك الرقمي بسرعة وكفاءة هندسية عالية</h1>
+        <p>نوفر لك البنية التحتية والأدوات السحابية الحديثة لتحويل أفكارك إلى منتجات رقمية متكاملة بأبسط الطرق وأعلى معايير الأداء والأمان.</p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">ابدأ الآن مجاناً</a>
-          <a href="#features" class="btn btn-secondary">اكتشف المزيد</a>
+          <a href="#pricing" class="btn btn-primary">استكشف الباقات</a>
+          <a href="#features" class="btn btn-secondary">تعرّف على المميزات</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="stats-bar">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="1500">0</span>
+          <span class="stat-label">مشروع نشط</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="99">0</span>
+          <span class="stat-label">نسبة الجاهزية %</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="45">0</span>
+          <span class="stat-label">دولة حول العالم</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="24">0</span>
+          <span class="stat-label">ساعة دعم متواصل</span>
         </div>
       </div>
     </section>
@@ -35,21 +63,37 @@
     <section id="features" class="features">
       <div class="container">
         <h2 class="section-title">لماذا تختار منصتنا؟</h2>
+        <p class="section-subtitle">مجموعة متكاملة من الأدوات المصممة لتسريع دورة التطوير وتقليل التكاليف التشغيلية.</p>
         <div class="features-grid">
           <div class="feature-card">
             <div class="icon">⚡</div>
             <h3>أداء فائق السرعة</h3>
-            <p>بنية برمجية خفيفة ومحسّنة تضمن تحميل صفحاتك في أجزاء من الثانية.</p>
+            <p>بنية برمجية خفيفة ومحسّنة تضمن تحميل صفحاتك وتطبيقاتك في أجزاء من الثانية.</p>
           </div>
           <div class="feature-card">
             <div class="icon">📱</div>
             <h3>تصميم متجاوب بالكامل</h3>
-            <p>تجربة مستخدم سلسة ومثالية على الهواتف الذكية والأجهزة اللوحية والحواسيب.</p>
+            <p>تجربة مستخدم سلسة ومثالية على الهواتف الذكية والأجهزة اللوحية والحواسيب المكتبية.</p>
           </div>
           <div class="feature-card">
             <div class="icon">🔒</div>
             <h3>أمان وموثوقية</h3>
-            <p>حماية متقدمة لبياناتك وخصوصية مستخدميك وفق أحدث المعايير الهندسية.</p>
+            <p>تشفير كامل للبيانات وحماية متقدمة وفق أحدث المعايير الهندسية العالمية.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">🔄</div>
+            <h3>مزامنة سحابية فورية</h3>
+            <p>تحديثات تلقائية ونسخ احتياطي مستمر يضمن عدم فقدان أي بيانات مهما كانت الظروف.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">📊</div>
+            <h3>تحليلات ذكية</h3>
+            <p>لوحة تحكم شاملة تمنحك رؤية واضحة لأداء مشروعك وسلوك المستخدمين لحظة بلحظة.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">🧩</div>
+            <h3>ربط برمجي مرن (API)</h3>
+            <p>واجهة برمجية نظيفة تتيح لك التكامل السريع مع أدواتك وخدماتك الخارجية المفضلة.</p>
           </div>
         </div>
       </div>
@@ -58,27 +102,77 @@
     <section id="pricing" class="pricing">
       <div class="container">
         <h2 class="section-title">خطط أسعار تناسب احتياجاتك</h2>
+        <div class="billing-toggle">
+          <span>دفع شهري</span>
+          <label class="switch">
+            <input type="checkbox" id="billing-switch" />
+            <span class="slider"></span>
+          </label>
+          <span>دفع سنوي <small class="discount-tag">وفّر 20%</small></span>
+        </div>
+
         <div class="pricing-grid">
           <div class="price-card">
             <h3>البداية</h3>
-            <div class="price">مجاني</div>
+            <div class="price" data-monthly="0" data-yearly="0">مجاني</div>
             <ul>
               <li>مشروع واحد نشط</li>
-              <li>دعم فني عبر البريد</li>
+              <li>دعم فني عبر البريد الإلكتروني</li>
               <li>استضافة سحابية أساسية</li>
+              <li>تحديثات أمان دورية</li>
             </ul>
             <a href="#contact" class="btn btn-secondary">ابدأ مجاناً</a>
           </div>
+
           <div class="price-card featured">
             <span class="badge">الأكثر طلباً</span>
             <h3>الاحترافية</h3>
-            <div class="price">29$ <span>/ شهرياً</span></div>
+            <div class="price" data-monthly="29" data-yearly="23">29$ <span>/ شهرياً</span></div>
             <ul>
               <li>مشاريع غير محدودة</li>
               <li>دعم فني على مدار الساعة</li>
-              <li>نطاق مخصص وشهادة SSL</li>
+              <li>نطاق مخصص وشهادة SSL مجانية</li>
+              <li>تحليلات متقدمة وتقارير دورية</li>
             </ul>
             <a href="#contact" class="btn btn-primary">اشترك الآن</a>
+          </div>
+
+          <div class="price-card">
+            <h3>المؤسسات</h3>
+            <div class="price" data-monthly="99" data-yearly="79">99$ <span>/ شهرياً</span></div>
+            <ul>
+              <li>خوادم مخصصة عالية الأداء</li>
+              <li>مدير حساب تقني مخصص</li>
+              <li>اتفاقية مستوى خدمة SLA 99.9%</li>
+              <li>تكامل مخصص وصلاحيات فرق متقدمة</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary">تواصل للمبيعات</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">هل يمكنني ترقية باقتي أو إلغاؤها في أي وقت؟ <span>+</span></button>
+            <div class="faq-answer">
+              <p>نعم، يمكنك التبديل بين الباقات أو إلغاء اشتراكك بضغطة زر واحدة من لوحة التحكم دون أي التزامات طويلة الأمد.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">هل تتوفر فترة تجريبية للباقة الاحترافية؟ <span>+</span></button>
+            <div class="faq-answer">
+              <p>بالتأكيد، نقدم فترة تجريبية مجانية لمدة 14 يوماً بكامل الصلاحيات دون الحاجة لإدخال بطاقة ائتمانية.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">كيف يتم تأمين بيانات المشاريع والمستخدمين؟ <span>+</span></button>
+            <div class="faq-answer">
+              <p>نستخدم تشفير AES-256 للبيانات المخزنة وبروتوكول TLS 1.3 للنقل، مع نسخ احتياطي تلقائي كل 6 ساعات.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -87,10 +181,16 @@
     <section id="testimonials" class="testimonials">
       <div class="container">
         <h2 class="section-title">ماذا يقول عملاؤنا؟</h2>
-        <blockquote class="testimonial-quote">
-          "ساعدتنا منصة أفق على إطلاق متجرنا الإلكتروني في أقل من أسبوع وبأداء مذهل."
-          <cite>— سارة المنصور، مؤسسة متجر سحاب</cite>
-        </blockquote>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <p>"ساعدتنا منصة أفق على إطلاق متجرنا الإلكتروني في أقل من أسبوع وبأداء مذهل فاق توقعاتنا."</p>
+            <cite>— سارة المنصور، مؤسسة متجر سحاب</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>"البساطة في الربط البرمجي وسرعة الاستجابة جعلت فريقنا يضاعف إنتاجيته خلال الشهر الأول."</cite>
+            <cite>— طارق العبدالله، مدير تقني في شركة مدار</cite>
+          </blockquote>
+        </div>
       </div>
     </section>
 
@@ -99,7 +199,8 @@
         <h2>جاهز لإطلاق خطوتك القادمة؟</h2>
         <p>انضم إلى مئات المطورين ورواد الأعمال الذين يثقون في حلولنا اليوم.</p>
         <form id="signup-form" class="signup-form">
-          <input type="email" placeholder="أدخل بريدك الإلكتروني..." required />
+          <input type="text" id="user-name" placeholder="الاسم الكامل..." required />
+          <input type="email" id="user-email" placeholder="البريد الإلكتروني..." required />
           <button type="submit" class="btn btn-primary">اشترك الآن</button>
         </form>
         <p id="form-feedback" class="feedback-msg"></p>
@@ -107,9 +208,16 @@
     </section>
   </main>
 
+  <button id="scroll-top" class="scroll-top" aria-label="العودة للأعلى">↑</button>
+
   <footer class="footer">
-    <div class="container">
+    <div class="container footer-content">
       <p>© 2026 منصة أفق. جميع الحقوق محفوظة.</p>
+      <div class="footer-links">
+        <a href="#features">المميزات</a>
+        <a href="#pricing">الأسعار</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+      </div>
     </div>
   </footer>
   <script src="main.js"></script>
