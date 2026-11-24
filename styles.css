@@ -1,12 +1,20 @@
 :root {
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
+  --primary: #16a34a;
+  --primary-hover: #15803d;
   --bg-light: #f8fafc;
   --text-main: #0f172a;
   --text-muted: #475569;
   --white: #ffffff;
   --border: #e2e8f0;
   --radius: 12px;
+}
+
+[data-theme="dark"] {
+  --bg-light: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --white: #0f172a;
+  --border: #334155;
 }
 
 * {
@@ -36,6 +44,10 @@ body {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   z-index: 100;
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(15, 23, 42, 0.95);
 }
 
 .nav-content {
@@ -81,7 +93,7 @@ body {
 
 .btn-primary {
   background-color: var(--primary);
-  color: var(--white) !important;
+  color: #ffffff !important;
 }
 
 .btn-primary:hover {
@@ -95,7 +107,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: #e2e8f0;
+  background-color: var(--border);
 }
 
 .btn-outline {
@@ -177,6 +189,90 @@ body {
   font-size: 0.95rem;
 }
 
+.pricing {
+  padding: 4.5rem 0;
+  background-color: var(--bg-light);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.price-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.price-card.featured {
+  border: 2px solid var(--primary);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  color: var(--primary);
+}
+
+.price span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.price-card ul {
+  list-style: none;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+.price-card ul li {
+  padding: 0.4rem 0;
+}
+
+.testimonials {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.testimonial-quote {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-main);
+}
+
+.testimonial-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
 .cta {
   padding: 4rem 0;
 }
@@ -215,6 +311,14 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   font-size: 1rem;
+  background-color: var(--white);
+  color: var(--text-main);
+}
+
+.feedback-msg {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--primary);
 }
 
 .footer {
